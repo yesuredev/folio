@@ -4,6 +4,8 @@ import Home from "./comp/Home";
 import Career from "./comp/Career";
 import Study from "./comp/Study";
 
+// import ScrollAnimation from "./comp/ScrollAnimation";
+
 function App() {
   return (
     <div>
@@ -18,7 +20,7 @@ function App() {
           </li>
         </ul>
       </nav>
-
+      {/* {ScrollAnimation} */}
       <Routes>
         <Route path="*" element={<p>404 error</p>} />
         <Route path="/" element={<Home />} />
