@@ -18,6 +18,13 @@ body {
   padding: 0;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -39,4 +46,40 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: #555;
+}
+
+body {
+  /* cursor: none; */
+  /* 기본 커서 숨기기 */
+  /* background-color: #f0f0f0; */
+  /* 배경색 설정 */
+}
+
+.icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  pointer-events: none; /* 아이콘 클릭 방지 */
+  transform: scale(1); /* 아이콘 크기 조정 */
+  /* transition: transform 0.3s ease;  */
+  /* 애니메이션 효과 */
+}
+
+a,
+button {
+  /* margin: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 5px; */
+  cursor: pointer;
+}
+
+.hovered {
+  transform: scale(1.5); /* 아이콘 크기 조정 */
+  background-color: rgba(255, 255, 255, 0.8); /* 반전 컬러 */
+  filter: invert();
+  /* cursor: none !important; */
 }

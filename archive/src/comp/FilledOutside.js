@@ -11,7 +11,7 @@ const Container = styled.div`
   background-color: #222;
 `;
 
-const AnimatedDiv = styled.div`
+const AnimatedDivd = styled.div`
   position: relative;
   width: 300px;
   height: 300px;
@@ -128,12 +128,12 @@ const App = () => {
 
   return (
     <Container>
-      <AnimatedDiv
+      <AnimatedDivd
         ref={divRef}
         onMouseMove={handleMouseEnter} // 마우스 이동으로 위치 업데이트
       >
         <span>ffsdf</span>
-      </AnimatedDiv>
+      </AnimatedDivd>
     </Container>
   );
 };
