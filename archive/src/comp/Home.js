@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ScrollAnimation from "./ScrollAnimation";
 // import useLocomotiveScroll from "../hooks/useSmoothScroll";
 import useSmoothScroll from "../hooks/useSmoothScroll";
+import { vwMax, vwFold, vwMobile } from "../hooks/useUnits"; // mixin이 정의된 경로
 // import useMouseIcon from "../hooks/useMouse";
 import OnLoad from "./OnLoad";
 
@@ -14,6 +15,9 @@ function Home() {
 
   return (
     <Container ref={scrollRef}>
+      <Box>
+        <span>Home</span>
+      </Box>
       {/* <a href="javascript:;">ffffff</a> */}
       <OnLoad />
       <h2>Home Page</h2>
@@ -48,5 +52,21 @@ const Container = styled.div`
     top: 10vh;
     left: 0;
     z-index: 10;
+  }
+`;
+
+const Box = styled.div`
+  position: absolute;
+  ${vwMax("width", 500)};
+  ${vwMax("height", 300)};
+  ${vwMax("top", 100)};
+  background-color: lightblue;
+  span {
+    ${vwMax("font-size", 20)};
+  }
+
+  @media screen and (max-width: 768px) {
+    ${vwMobile("width", 300)};
+    ${vwMobile("height", 200)};
   }
 `;
